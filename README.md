@@ -1,4 +1,4 @@
-# Exchange Union Golang Version
+# Exchange Union Golang Version **⚠️ WIP**
 
 [Exchange Union](https://www.exchangeunion.com/) (XU) is a decentralized exchange layer built on the [Lightning](http://lightning.network/) and [Raiden](https://raiden.network/) networks to enable trustless and instant cryptocurrency swaps and order fulfillment between exchanges.
 
@@ -16,14 +16,21 @@ Contributions, feedback, and questions are welcome.
 First, clone the repository from GitHub and install dependencies.
 
 ```bash
-git clone https://github.com/ExchangeUnion/xud
-cd xud
-npm install
+#Let go automatically compile and install
+$ go install github.com/indxcrypto/xud
+
+#OR do the hard way
+$ git clone https://github.com/indxcrypto/xud
+$ cd xud
+$ govendor sync #This Project uses govendor to manage dependencies.
+$ go build && go install ./..
 ```
 
-Xud uses [MySQL](https://www.mysql.com/) or [MariaDB](https://mariadb.org/). You will have to install one of those and create a user and database grant all permissions for the new database to the new user.
+XUD uses Sqlite for now but not limited to it and can be extended to other sql databases.
 
 ## Starting the Daemon
+
+Assuming you have copied or placed the `xud` and `xucli` programs in `~/xud/bin` folder / path on your system.
 
 ```bash
 ~/xud $ cd bin

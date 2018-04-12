@@ -6,7 +6,6 @@ import (
 
 	"github.com/gorilla/mux"
 	"github.com/gorilla/rpc"
-	json "github.com/gorilla/rpc/v2/json2"
 	log "github.com/sirupsen/logrus"
 )
 
@@ -47,8 +46,8 @@ func (rm *RPCService) shutdown(r *http.Request, args *Args, result *Response) er
 
 func StartRPCServer(rpcport string) {
 	rpcServer := rpc.NewServer()
-	rpcServer.RegisterCodec(json.NewCodec(), "application/json")
-	rpcServer.RegisterCodec(json.NewCodec(), "application/json;charset=UTF-8")
+	//rpcServer.RegisterCodec(json.NewCodec(), "application/json")
+	//rpcServer.RegisterCodec(json.NewCodec(), "application/json;charset=UTF-8")
 	rpcservice := new(RPCService)
 	rpcServer.RegisterService(rpcservice, "")
 	router := mux.NewRouter()
