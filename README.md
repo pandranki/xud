@@ -1,4 +1,4 @@
-# Exchange Union Golang Version **⚠️ WIP**
+# Exchange Union Golang Version **⚠️ WIP** [![Build Status](https://travis-ci.org/indxcrypto/xud.svg?branch=dev)](https://travis-ci.org/indxcrypto/xud)
 
 [Exchange Union](https://www.exchangeunion.com/) (XU) is a decentralized exchange layer built on the [Lightning](http://lightning.network/) and [Raiden](https://raiden.network/) networks to enable trustless and instant cryptocurrency swaps and order fulfillment between exchanges.
 
