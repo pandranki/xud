@@ -1,8 +1,6 @@
 package db
 
 import (
-	"sync"
-
 	"github.com/indxcrypto/xud/models"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/sqlite"
@@ -12,8 +10,7 @@ import (
 
 var (
 	//Db Exported DB Connection
-	Db   *gorm.DB
-	once sync.Once
+	Db *gorm.DB
 )
 
 // DBCon creates new database connection.

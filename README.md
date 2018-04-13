@@ -69,3 +69,7 @@ host = "localhost"
 listen = true
 port = 8885
 ```
+
+```
+protoc -I. -I$GOPATH/src/github.com/grpc-ecosystem/grpc-gateway/third_party/googleapis  --go_out=build/ lndrpc.proto
+```

@@ -23,18 +23,18 @@ func main() {
 		Commands: []*cli.Command{
 			{
 				Name:   "getinfo",
-				Usage:  "complete a task on the list",
+				Usage:  "",
 				Action: xuclient.GetInfo,
 			},
 			{
 				Name:   "placeorder",
-				Usage:  "add a task to the list",
+				Usage:  "",
 				Action: xuclient.PlaceOrder,
 				Flags: []cli.Flag{
 					&cli.StringFlag{
 						Name:  "lang",
 						Value: "english",
-						Usage: "language for the greeting",
+						Usage: "",
 					},
 				},
 			},

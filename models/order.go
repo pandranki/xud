@@ -1,15 +1,21 @@
 package models
 
 import (
+	"time"
+
 	"github.com/jinzhu/gorm"
+	"github.com/pborman/uuid"
 )
 
 type Order struct {
-	gorm.Model
-	PairID string
-	PeerID string
-	Quantity string
-	Price string
+	ID        uuid.UUID `gorm:"primary_key"`
+	CreatedAt time.Time
+	UpdatedAt time.Time
+	DeletedAt *time.Time `sql:"index"`
+	PairID    string
+	PeerID    string
+	Quantity  string
+	Price     string
 }
 
 func (o *Order) GetOrders(db *gorm.DB) []Order {
@@ -18,7 +24,7 @@ func (o *Order) GetOrders(db *gorm.DB) []Order {
 	return orders
 }
 
-func (o *Order) AddOrder(db *gorm.DB,order Order) (string ,error){
+func (o *Order) AddOrder(db *gorm.DB, order Order) (string, error) {
 	db.Create(order)
-	return "",nil
+	return "", nil
 }
