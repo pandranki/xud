@@ -14,3 +14,11 @@ func NewRaidenClient(host, port string) *RaidenClient {
 func (rndc *RaidenClient) TokenSwap() (bool, error) {
 	return true, nil
 }
+
+func (rndc *RaidenClient) getChannelInfo() (bool, error) {
+	return true, nil
+}
+
+func (rndc *RaidenClient) callAPI() (bool, error) {
+	return true, nil
+}
